@@ -7,11 +7,11 @@ node {
     stage('Build') {
              app = docker.build("sanghvt/hello-world:${env.BUILD_NUMBER}", "-f Dockerfile .")
          }
-     stage('Test') {
-         steps {
-            sh 'echo "Test"'
-         }
-     }
+//     stage('Test') {
+//         steps {
+//           sh 'echo "Test"'
+//         }
+//     }
      stage('push image') {
          docker.withRegistry(''){
              app.push()
