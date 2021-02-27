@@ -13,7 +13,7 @@ node {
 //         }
 //     }
      stage('push image') {
-         docker.withRegistry(''){
+         docker.withRegistry('', 'dockerhub'){
              app.push()
          }
      }
