@@ -4,7 +4,7 @@ COPY ./ /home/app/
 
 WORKDIR /home/app
 
-RUN mvn package -Dmaven.test.skip=true
+RUN mvn package
 
 EXPOSE 8087
 
