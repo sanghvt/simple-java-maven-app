@@ -47,6 +47,7 @@ pipeline {
                   helm upgrade hello-world chartmuseum/hello-app --set image.tag=${env.BUILD_NUMBER}
                 """
                  }
+         }
     } catch (e) {
             currentBuild.result = "FAILED"
             throw e
