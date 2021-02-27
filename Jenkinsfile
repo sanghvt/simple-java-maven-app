@@ -38,7 +38,7 @@ node {
             sh 'pwd'
             sh """
               echo "Build number in sh script: ${env.BUILD_NUMBER}"
-              helm upgrade hello-world chartmuseum/hello-app --set image.tag=${env.BUILD_NUMBER},service.type=NodePort
+              helm upgrade hello-world chartmuseum/hello-app --install --set image.tag=${env.BUILD_NUMBER},service.type=NodePort
             """
              }
      }
