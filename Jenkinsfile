@@ -25,7 +25,7 @@ node {
          """
      }
      dir('k8s'){
-         stage('helm push repo chart on Chartmuseum'){
+         stage('helm push repo chart on Chartmuseum.'){
              sh """
              helm push hello-app/ chartmuseum
              helm repo update
