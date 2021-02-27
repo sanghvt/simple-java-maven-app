@@ -27,7 +27,6 @@ node {
      dir('k8s'){
          stage('helm push repo chart on Chartmuseum'){
              sh """
-             helm plugin install https://github.com/chartmuseum/helm-push.git
              helm push hello-app/ chartmuseum
              helm repo update
              helm search repo chartmuseum
