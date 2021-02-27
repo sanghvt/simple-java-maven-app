@@ -19,7 +19,7 @@ node {
      }
      stage('helm delete repo chart on chartmuseum'){
          sh """
-         curl -XDELETE http://localhost:8077/api/charts/hello-app/0.1.0
+         curl -XDELETE http://127.0.0.1:8077/api/charts/hello-app/0.1.0
          helm repo update
          """
      }
