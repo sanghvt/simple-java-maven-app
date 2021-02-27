@@ -1,5 +1,4 @@
 pipeline {
- try {
     def app
     agent {
         docker {
@@ -48,10 +47,4 @@ pipeline {
                 """
                  }
          }
-    } catch (e) {
-            currentBuild.result = "FAILED"
-            throw e
-        } finally {
-            notifyBuild(currentBuild.result)
-    }
 }
